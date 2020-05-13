@@ -1,0 +1,32 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentA">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.myPackage.FragmentA"
+        >
+
+        <argument
+            android:name="argumentName"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/toFragmentB"
+            app:destination="@id/fragmentB"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.mypackage.FragmentB"
+        >
+
+        <argument
+            android:name="differentArgumentName"
+            app:argType="string"/>
+
+    </fragment>
+</navigation>
